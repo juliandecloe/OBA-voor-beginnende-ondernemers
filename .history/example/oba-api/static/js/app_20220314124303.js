@@ -1,7 +1,7 @@
 /*** Fetching data -> refactor into module later ***/
 const main = document.querySelector('main');
 const cors = 'https://cors-anywhere.herokuapp.com/';
-const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
+const endpoint = 'https://zoeken.oba.nl/api/v1/search/rctx/?q=';
 const query = 'tolkien';
 const key = '9a9b148ab8abe117aa908';
 const secret = '1a3b58ea286b7117a29af';
@@ -9,10 +9,11 @@ const detail = 'Default';
 const url = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`;
 
 const config = {
-  Authorization: `Bearer ${secret}`
+  Authorization: `Bearer ${secret}`,
 };
 
 fetch(url, config)
+
   .then(response => {
     return response.json();
   })

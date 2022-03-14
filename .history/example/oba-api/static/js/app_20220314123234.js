@@ -13,6 +13,15 @@ const config = {
 };
 
 fetch(url, config)
+  .get('search', {
+    rctx:
+      'AWNkYOZmYGcwrEorS801zTXOLSvMNEyqMEoqN6wyzkpOZWZk4MxNzMxjZGYQT8svyk0ssUrKz8@mBBGMzNKZ8UWpycUFqUUFiemprEYGTAwXQm4Z3DJgalvEyKixTIJ5gwUDA3t$UiIDA2dlamKRon5Rfn6Jfk5mYWlmij5QnL20KIeBNS$HEQA',
+    q: 'format:book',
+    refine: true,
+    sort: 'year',
+    facet: ['topic(Wereldoorlog II)', 'pubYearRange(5_OlderThan50)'],
+    page: 1
+  })
   .then(response => {
     return response.json();
   })

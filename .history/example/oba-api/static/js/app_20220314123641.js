@@ -13,6 +13,7 @@ const config = {
 };
 
 fetch(url, config)
+
   .then(response => {
     return response.json();
   })

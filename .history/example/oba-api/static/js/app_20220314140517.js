@@ -9,7 +9,8 @@ const detail = 'Default';
 const url = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`;
 
 const config = {
-  Authorization: `Bearer ${secret}`
+  Authorization: `Bearer ${secret}`,
+  requireHeader : ['origin', 'x-requested-with']
 };
 
 fetch(url, config)

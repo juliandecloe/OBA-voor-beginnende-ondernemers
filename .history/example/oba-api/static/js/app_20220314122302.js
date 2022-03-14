@@ -1,7 +1,7 @@
 /*** Fetching data -> refactor into module later ***/
 const main = document.querySelector('main');
 const cors = 'https://cors-anywhere.herokuapp.com/';
-const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
+const endpoint = 'https://zoeken.oba.nl/api/v1/search/';
 const query = 'tolkien';
 const key = '9a9b148ab8abe117aa908';
 const secret = '1a3b58ea286b7117a29af';

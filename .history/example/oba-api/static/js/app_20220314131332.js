@@ -9,10 +9,11 @@ const detail = 'Default';
 const url = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`;
 
 const config = {
-  Authorization: `Bearer ${secret}`
+  Authorization: `Bearer ${secret}`,
 };
 
 fetch(url, config)
+
   .then(response => {
     return response.json();
   })

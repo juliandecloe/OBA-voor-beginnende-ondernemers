@@ -8,12 +8,25 @@ const secret = '1a3b58ea286b7117a29af';
 const detail = 'Default';
 const url = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`;
 
+// client
+//   .get('search', {
+//     rctx:
+//       'AWNkYOZmYGcwrEorS801zTXOLSvMNEyqMEoqN6wyzkpOZWZk4MxNzMxjZGYQT8svyk0ssUrKz8@mBBGMzNKZ8UWpycUFqUUFiemprEYGTAwXQm4Z3DJgalvEyKixTIJ5gwUDA3t$UiIDA2dlamKRon5Rfn6Jfk5mYWlmij5QnL20KIeBNS$HEQA',
+//     q: 'format:book',
+//     refine: true,
+//     sort: 'year',
+//     facet: ['topic(Wereldoorlog II)', 'pubYearRange(5_OlderThan50)'],
+//     page: 1
+//   })
+
 const config = {
   Authorization: `Bearer ${secret}`
 };
 
 fetch(url, config)
   .then(response => {
+    rctx:
+      'AWNkYOZmYGcwrEorS801zTXOLSvMNEyqMEoqN6wyzkpOZWZk4MxNzMxjZGYQT8svyk0ssUrKz8@mBBGMzNKZ8UWpycUFqUUFiemprEYGTAwXQm4Z3DJgalvEyKixTIJ5gwUDA3t$UiIDA2dlamKRon5Rfn6Jfk5mYWlmij5QnL20KIeBNS$HEQA',
     return response.json();
   })
   .then(data => {
