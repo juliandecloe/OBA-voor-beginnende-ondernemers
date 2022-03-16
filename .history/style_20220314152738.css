@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Avenir', Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > h1 {
+    width: 100px;
+}
+
+header svg {
+    fill: white;
+}
+
+h2 {
+    font-size: 28px;
+    width: 200px;
+    text-align: right;
+    line-height: 20px;
+}
+
+h2 span {
+    font-size: 16px;
+    display: inline;
+}
+
+form {
+    padding: 10vw;
+}
+
+input {
+    width: 80vw;
+    max-width: 300px;
+}
+

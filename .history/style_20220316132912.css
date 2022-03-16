@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Avenir', Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > h1 {
+    width: 100px;
+}
+
+header svg {
+    fill: white;
+}
+
+h2 {
+    font-size: 28px;
+    width: 200px;
+    text-align: right;
+    line-height: 20px;
+    transition: .3s;
+}
+
+h2 span {
+    font-size: 16px;
+    display: inline;
+}
+
+@media (max-width: 720px) {
+    h2 {
+        font-size: 22px;
+    }
+    
+    h2 span {
+        font-size: 12px;
+    }
+}
+
+form {
+    min-width: 60vw;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0 2px gray);
+}
+
+input {
+    width: 70%;
+    height: 40px;
+    max-width: 500px;
+    border-radius: 0;
+    border: none;
+}
+
+form button {
+    width: 40px;
+    height: 40px;
+    background: black;
+    color: white;
+    font-weight: 800;
+    border: none;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+    cursor: pointer;
+    padding-left: 12px;
+    overflow: hidden;
+} 
+
+@media (min-width: 720px) {
+
+    form button:hover {
+        width: 100px;
+        padding-right: 5px;
+    }
+
+    form button::after {
+        content: "search";
+        display: inline-block;
+        opacity: 0;
+        color: white;
+        transition: .5s;
+        width: 100px;
+        transition-delay: .1s;
+    }
+
+    form button:hover::after {
+        opacity: 1;
+    }
+
+}
+
+main > ul {
+    list-style-type: none;
+    padding: 0 15%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main > ul li {
+    width: 250px;
+    margin: 0 2em 3em 0;
+}
+
+main > ul h3 {
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; 
+    height: 50px;
+}
+
+main > ul p {
+    width: 95%;
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+    color: gray;
+    margin: 1rem 0;
+    height: 70px;
+}
+
+main > ul img {
+    width: 100%;
+    background: rgb(221, 221, 221);
+}

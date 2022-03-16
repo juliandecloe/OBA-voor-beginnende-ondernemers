@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Avenir', Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > h1 {
+    width: 100px;
+}
+
+header svg {
+    fill: white;
+}
+
+h2 {
+    font-size: 28px;
+    width: 200px;
+    text-align: right;
+    line-height: 20px;
+}
+
+h2 span {
+    font-size: 16px;
+    display: inline;
+}
+
+form {
+    width: 100vw;
+    height: 25vh;
+    display: grid;
+    place-items: center;
+}
+
+input {
+    width: 80vw;
+    max-width: 500px;
+}
+
+form button {
+    padding: 5px;
+    background: black;
+    color: white;
+}
+

@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Avenir', Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+header > h1 {
+    display: inline-block;
+    width: 15vw;
+}
+
+header svg {
+    fill: white;
+}
+
+h2 {
+    font-size: 6vw;
+    width: 35vw;
+}
+
+h2 span {
+    font-size: 3vw;
+    display: inline;
+}
+

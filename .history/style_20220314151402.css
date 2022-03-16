@@ -1,0 +1,18 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+header > * {
+    display: inline-block;
+    width: 10vw;
+}
+
+svg {
+    fill: white;
+}

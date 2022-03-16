@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+header {
+    background-color: black;
+}
+
+svg {
+    fill: white;
+}
