@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Avenir', Arial, sans-serif;
+}
+
+body, html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > h1 {
+    width: 100px;
+}
+
+header svg {
+    fill: white;
+}
+
+h2 {
+    font-size: 28px;
+    width: 200px;
+    text-align: right;
+    line-height: 20px;
+    transition: .3s;
+}
+
+h2 span {
+    font-size: 16px;
+    display: inline;
+}
+
+@media (max-width: 720px) {
+    h2 {
+        font-size: 22px;
+    }
+    
+    h2 span {
+        font-size: 12px;
+    }
+}
+
+form {
+    min-width: 60vw;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0 2px gray);
+}
+
+input {
+    width: 70%;
+    height: 40px;
+    max-width: 500px;
+    border-radius: 0;
+    border: none;
+    padding-left: 1rem;
+}
+
+form button {
+    width: 40px;
+    height: 40px;
+    background: black;
+    color: white;
+    font-weight: 800;
+    border: none;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+    cursor: pointer;
+    padding-left: 12px;
+    overflow: hidden;
+} 
+
+@media (min-width: 720px) {
+
+    form button:hover {
+        width: 100px;
+        padding-right: 5px;
+    }
+
+    form button::after {
+        content: "zoeken";
+        display: block;
+        opacity: 0;
+        color: white;
+        transition: .5s;
+        transition-delay: .1s ease-in-out;
+    }
+
+    form button:hover::after {
+        opacity: 1;
+        margin-left: 15px;
+    }
+
+}
+
+main > section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+main > section article {
+    width: 250px;
+    margin: 1.5rem 0;
+    transition: .5s;
+    padding: 1rem;
+    border: 3px solid rgba(255, 0, 0, 0);
+}
+
+main > section h3 {
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; 
+    height: 50px;
+}
+
+main > section p:not(.suggest-book p, .detailed p) {
+    width: 95%;
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+    color: gray;
+    margin: 1rem 0;
+    height: 70px;
+}
+
+main > section img:not(.detailed img) {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    background: rgb(233, 233, 233);
+}
+
+.suggest-book {
+    width: 100%;
+    text-align: center;
+}
+
+.suggest-book {
+    padding: 3rem;
+}
+
+.suggest-book h2 {
+    display: inline;
+    background: rgb(255,0,0);
+    background: linear-gradient(0deg, rgba(255,0,0,0.09989933473389356) 0%, rgba(255,0,0,0.10270045518207283) 50%, rgba(9,9,121,0) 50%);
+    padding-bottom: .1rem;
+    width: 50%;
+    text-align: center;
+}
+
+.suggest-book button {
+    background-color: red;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.suggest-book p {
+    margin: 2rem 0;
+}
+
+#random-book, .results:hover:not(.detailed) {
+    box-shadow: 2px 2px 4px gray;
+    transform: translateY(-2rem);
+    border: 3px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detailed {
+    position: fixed;
+    background: white;
+    z-index: 4;
+    top: 20vh;
+    left: 15vw;
+    transition: none;
+    width: 70vw;
+    height: 60vh;
+    padding: 2.5vh 1.5vw;
+    margin: 0;
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: .5fr .7fr .2fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 8px;
+}
+
+.detailed img {
+    grid-area: 1 / 1 / 6 / 2;
+    width: 90%;
+    place-self: center;
+}
+
+.detailed h3 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.detailed p {
+    grid-area: 2 / 2 / 3 / 3;
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+}
+
+.detailed h4 {
+    grid-area: 3 / 2 / 4 / 3;
+    place-self: left center;
+}
+
+.detailed div {
+    grid-area: 4 / 2 / 5 / 3;
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 47px;
+    grid-row-gap: 0px;
+}  
+
+ul {
+    list-style-type: none;
+}
+
+.background {
+    background: black;
+    position: fixed;
+    opacity: .5;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+}
