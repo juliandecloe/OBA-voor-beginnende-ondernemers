@@ -32,7 +32,7 @@ export function renderData(data) {
                     <li>${item.publisher ? item.publisher : 'Geen uitgever'}</li>
                     <li>${item.languages ? item.languages : 'Geen taal'}</li>
                     <li>${item.year ? item.year : 'Geen jaar'}</li>
-                    <li>${item["subject-topical"] ? item["subject-topical"] : 'Geen onderwerp'}</li>
+                    <li>${item.subjecttopical ? item.subjecttopical : 'Geen onderwerp'}</li>
                   </ul>
               </div>
         </article>
