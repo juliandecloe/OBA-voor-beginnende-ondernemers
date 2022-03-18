@@ -467,6 +467,7 @@ body > button::after {
     display: none !important;
 }
 
+
 section figure:first-child {
     background-color: rgb(223, 223, 223);
     width: 100%;

@@ -438,7 +438,7 @@ body > button::after {
 }
 
 .to-top {
-    animation: scroll 1.5s ease-out forwards;
+    animation: scroll 1s ease-out forwards;
 }
 
 @keyframes scroll {
@@ -466,6 +466,7 @@ body > button::after {
 .hide {
     display: none !important;
 }
+
 
 section figure:first-child {
     background-color: rgb(223, 223, 223);
