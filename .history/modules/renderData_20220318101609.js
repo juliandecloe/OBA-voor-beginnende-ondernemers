@@ -1,17 +1,16 @@
 import { suggestBook } from "./suggestRando.js";
 import { triggerDetailed } from "./detailed.js";
-import { firstLoader } from "./states.js";
 
 const section = document.querySelector('main > section');
 
 export function renderData(data, scroll) {
-  let articleEl = document.querySelectorAll('section:first-of-type article');
+  let articleEl = document.querySelectorAll('article');
   if(!scroll) {
     articleEl.forEach((item) => {
       item.remove();
     });
   }
-  firstLoader()
+  document.body.classList.remove('overflow');
   data.results.forEach((item) => {
     section.insertAdjacentHTML('beforeend', 
         `

@@ -352,11 +352,11 @@ body > div {
 }
 
 .results button:hover::before {
-    transform: rotate(315deg);
+    transform: rotate(-45deg)
 }
 
 .results button:hover::after {
-    transform: rotate(405deg);
+    transform: rotate(45deg)
 }
 
 
@@ -438,7 +438,7 @@ body > button::after {
 }
 
 .to-top {
-    animation: scroll 1.5s ease-out forwards;
+    animation: scroll 2s ease-out forwards;
 }
 
 @keyframes scroll {
@@ -497,27 +497,4 @@ section figure:last-child {
     100% {
         background-color: rgb(209, 208, 208); 
     }
-}
-
-section:last-of-type {
-    text-align: center;
-    display: grid;
-    place-items: center;
-}
-
-section:last-of-type article {
-    margin-bottom: 2rem;
-    width: 100%;
-}
-
-section:last-of-type h3 {
-    margin-bottom: 2rem;
-}
-
-section:last-of-type a {
-    background-color: red;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 5px 15px;
-    color: white;
 }

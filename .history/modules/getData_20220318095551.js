@@ -1,7 +1,6 @@
 import { renderData } from "./renderData.js";
 import { query } from "../script.js";
 import { page } from "./scroll.js";
-import { noResults } from "./states.js";
 
 const cors = 'https://cors-anywhere.herokuapp.com/';
 const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
@@ -11,7 +10,7 @@ const config = {
   Authorization: `Bearer 4289fec4e962a33118340c888699438d`
 }
 
-export function getData(scroll) { 
+// export function getData(scroll) { 
     let url = `${cors}${endpoint}${'Ondernemerschap+' + query}&page=${page}&authorization=${key}&detaillevel=${detail}&output=json`;
     fetch(url, config)
     .then(response => {
@@ -19,14 +18,9 @@ export function getData(scroll) {
     })
     .then(data => {
         console.dir(data)
-        if(data.results.length > 0) {
-            renderData(data, scroll);
-        } else {
-            noResults();
-        }
+        renderData(data, scroll);
     })
     .catch(err => {
-        console.log(err)
-        noResults();
+        console.log(err);
     });
 }

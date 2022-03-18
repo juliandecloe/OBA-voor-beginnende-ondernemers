@@ -19,11 +19,13 @@ export function getData(scroll) {
     })
     .then(data => {
         console.dir(data)
-        if(data.results.length > 0) {
-            renderData(data, scroll);
-        } else {
+        if(data.results.length === 0) {
+            console.log('length');
             noResults();
+        } else {
+            renderData(data, scroll);
         }
+        
     })
     .catch(err => {
         console.log(err)

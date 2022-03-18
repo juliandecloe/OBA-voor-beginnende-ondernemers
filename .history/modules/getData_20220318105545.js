@@ -12,7 +12,7 @@ const config = {
 }
 
 export function getData(scroll) { 
-    let url = `${cors}${endpoint}${'Ondernemerschap+' + query}&page=${page}&authorization=${key}&detaillevel=${detail}&output=json`;
+    let url = `${cors}${endpoint}${query}&page=${page}&authorization=${key}&detaillevel=${detail}&output=json`;
     fetch(url, config)
     .then(response => {
         return response.json();

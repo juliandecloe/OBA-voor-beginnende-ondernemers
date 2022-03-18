@@ -24,6 +24,7 @@ export function getData(scroll) {
         } else {
             noResults();
         }
+        
     })
     .catch(err => {
         console.log(err)

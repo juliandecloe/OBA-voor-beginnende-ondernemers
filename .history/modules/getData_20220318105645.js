@@ -20,6 +20,7 @@ export function getData(scroll) {
     .then(data => {
         console.dir(data)
         if(data.results.length > 0) {
+            console.log('removes')
             renderData(data, scroll);
         } else {
             noResults();

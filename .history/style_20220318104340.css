@@ -356,7 +356,7 @@ body > div {
 }
 
 .results button:hover::after {
-    transform: rotate(405deg);
+    transform: rotate(45deg);
 }
 
 
@@ -438,7 +438,7 @@ body > button::after {
 }
 
 .to-top {
-    animation: scroll 1.5s ease-out forwards;
+    animation: scroll 2s ease-out forwards;
 }
 
 @keyframes scroll {

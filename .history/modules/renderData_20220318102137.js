@@ -5,7 +5,7 @@ import { firstLoader } from "./states.js";
 const section = document.querySelector('main > section');
 
 export function renderData(data, scroll) {
-  let articleEl = document.querySelectorAll('section:first-of-type article');
+  let articleEl = document.querySelectorAll('article');
   if(!scroll) {
     articleEl.forEach((item) => {
       item.remove();
