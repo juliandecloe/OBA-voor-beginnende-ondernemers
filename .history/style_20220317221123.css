@@ -1,0 +1,302 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Avenir', Arial, sans-serif;
+}
+
+body, html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > a {
+    width: 100px;
+}
+
+header svg {
+    fill: white;
+}
+
+h2 {
+    font-size: 28px;
+    width: 200px;
+    text-align: right;
+    line-height: 20px;
+    transition: .3s;
+}
+
+h2 span {
+    font-size: 16px;
+    display: inline;
+}
+
+@media (max-width: 720px) {
+    h2 {
+        font-size: 22px;
+    }
+    
+    h2 span {
+        font-size: 12px;
+    }
+}
+
+form {
+    min-width: 60vw;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0 2px gray);
+}
+
+input {
+    width: 70%;
+    height: 40px;
+    max-width: 500px;
+    border-radius: 0;
+    border: none;
+    padding-left: 1rem;
+}
+
+form button {
+    width: 40px;
+    height: 40px;
+    background: black;
+    color: white;
+    font-weight: 800;
+    border: none;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+    cursor: pointer;
+    padding-left: 12px;
+    overflow: hidden;
+} 
+
+@media (min-width: 720px) {
+
+    form button:hover {
+        width: 100px;
+        padding-right: 5px;
+    }
+
+    form button::after {
+        content: "zoeken";
+        display: block;
+        opacity: 0;
+        color: white;
+        transition: .5s;
+        transition-delay: .1s ease-in-out;
+    }
+
+    form button:hover::after {
+        opacity: 1;
+        margin-left: 15px;
+    }
+
+}
+
+main > section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+main > section article {
+    width: 250px;
+    margin: 1.5rem 0;
+    transition: .5s;
+    padding: 1rem;
+    border: 3px solid rgba(255, 0, 0, 0);
+}
+
+main > section h3 {
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; 
+    height: 50px;
+}
+
+main > section p:not(.suggest-book p, .detailed p) {
+    width: 95%;
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+    color: gray;
+    margin: 1rem 0;
+    height: 70px;
+}
+
+main > section img:not(.detailed img) {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    background: rgb(233, 233, 233);
+}
+
+.suggest-book {
+    width: 100%;
+    text-align: center;
+}
+
+.suggest-book {
+    padding: 3rem;
+}
+
+.suggest-book h2 {
+    display: inline;
+    background: rgb(255,0,0);
+    background: linear-gradient(0deg, rgba(255,0,0,0.09989933473389356) 0%, rgba(255,0,0,0.10270045518207283) 50%, rgba(9,9,121,0) 50%);
+    padding-bottom: .1rem;
+    width: 50%;
+    text-align: center;
+}
+
+.suggest-book button {
+    background-color: red;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.suggest-book p {
+    margin: 2rem 0;
+}
+
+#random-book, .results:hover:not(.detailed) {
+    box-shadow: 2px 2px 4px gray;
+    transform: translateY(-2rem);
+    border: 3px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detailed {
+    --detail-width: 70vw;
+    position: fixed;
+    background-color: white;
+    z-index: 4;
+    top: 15vh;
+    left: calc(100vw - var(--detail-width));
+    transition: none;
+    /* width: var(--detail-width); */
+    padding: 2.5vh 2rem;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: .5fr .7fr .2fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 1px;
+    place-items: center left;
+    box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.616)
+}
+
+.detailed img {
+    grid-area: 1 / 1 / 6 / 2;
+    width: 95%;
+    place-self: center;
+}
+
+.detailed h3 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.detailed > p {
+    grid-area: 2 / 2 / 3 / 3;
+    display: -webkit-box;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+}
+
+.detailed h4 {
+    grid-area: 3 / 2 / 4 / 3;
+    place-self: left center;
+}
+
+.detailed div {
+    grid-area: 4 / 2 / 5 / 3;
+    display: block;
+    /* display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 47px;
+    grid-row-gap: 0px; */
+}  
+
+.detailed li {
+    list-style-type: none;
+    width: 100%;
+    /* white-space: nowrap;
+    overflow : hidden;
+    text-overflow: ellipsis; */
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+}
+
+.detailed li p:first-child {
+    grid-area: 1 / 1 / 2 / 2;
+    overflow-wrap: break-word;
+}
+
+.detailed li p:last-child {
+    grid-area: 1 / 2 / 2 / 3;
+    overflow-wrap: break-word;
+}
+
+.hide {
+    display: none;
+}
+
+body > div {
+    background: black;
+    position: fixed;
+    opacity: .5;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+}
+
+.results button {
+    position: absolute;
+    top: .3rem;
+    right: .5rem;
+    width: 1rem;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    background: none;
+    color: red;
+    font-weight: 800;
+    border: none;
+    font-stretch: extra-expanded;
+    font-size: 1.3rem;
+}
+
